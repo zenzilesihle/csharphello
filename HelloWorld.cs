@@ -29,6 +29,9 @@ class HelloWorld {
         /***struct ***/
         structBook();
 
+        /***enumaration ***/
+        enumaration();
+
         Console.ReadKey();
     }
 
@@ -119,5 +122,17 @@ class HelloWorld {
            student.age, student.gender); 
         Console.WriteLine("Fullname: {0} {1}\nAge: {2}, Gender: {3}", lecturer.name, lecturer.surname,
            lecturer.age, lecturer.gender);
+    }
+
+    enum Months {
+        JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE,
+            JULY, AUGUST, SEPTEMBER, OCTOBER, NOVEMBER, DECEMBER
+    };
+
+    static void enumaration() {
+        Console.WriteLine("Months.JANUARY.ToString(): {0}", Months.JANUARY.ToString());
+        Console.WriteLine("(int)Months.JUNE: {0}", (int)Months.JUNE);
+        Console.WriteLine("(int)Months.DECEMBER: {0}", (int)Months.DECEMBER);
+        Console.WriteLine("Months.JANUARY: {0}", Months.JANUARY);
     }
 }
