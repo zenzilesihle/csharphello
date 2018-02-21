@@ -16,6 +16,9 @@ class HelloWorld {
         /***value swapping***/
         swap();
 
+        /***value swapping***/
+        stringManipulation();
+
         Console.ReadKey();
     }
 
@@ -72,5 +75,19 @@ class HelloWorld {
             }
             Console.WriteLine("");
         }
+    }
+
+    static void stringManipulation() {
+        /*character array to string */
+        Console.WriteLine("Char array { 'M', 'a', 'n', 'i','p' } to string");
+        char [] arrayCharacter = { 'M', 'a', 'n', 'i','p' };
+        string word = new string(arrayCharacter);
+        Console.WriteLine("string(arrayCharacter): {0}", word);
+
+        /*join array element into a sentence */
+        string [] messageArray = {"I", "am", "going", "to", "school."};
+        Console.WriteLine("join array {'I', 'am', 'going', 'to', 'school'} to string.");
+        String message = String.Join(" ", messageArray);
+        Console.WriteLine("String.Join(' ', array): {0}", message);
     }
 }
