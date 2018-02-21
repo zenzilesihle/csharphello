@@ -1,5 +1,12 @@
 using System;
 
+struct Person {
+    public string name;
+    public string surname;
+    public int age;
+    public char gender;
+}
+
 class HelloWorld {
     static void Main(String[] args) {
         Console.WriteLine("Hello World");
@@ -18,6 +25,9 @@ class HelloWorld {
 
         /***value swapping***/
         stringManipulation();
+
+        /***struct ***/
+        structBook();
 
         Console.ReadKey();
     }
@@ -89,5 +99,25 @@ class HelloWorld {
         Console.WriteLine("join array {'I', 'am', 'going', 'to', 'school'} to string.");
         String message = String.Join(" ", messageArray);
         Console.WriteLine("String.Join(' ', array): {0}", message);
+    }
+
+    static void structBook() {
+        Person student;
+        Person lecturer;
+
+        student.name = "Micheal";
+        student.surname = "Jackson";
+        student.age = 19;
+        student.gender = 'M';
+
+        lecturer.name = "Sisanda";
+        lecturer.surname = "Monsta";
+        lecturer.age = 25;
+        lecturer.gender = 'F';
+
+        Console.WriteLine("Fullname: {0} {1}\nAge: {2}, Gender: {3}", student.name, student.surname,
+           student.age, student.gender); 
+        Console.WriteLine("Fullname: {0} {1}\nAge: {2}, Gender: {3}", lecturer.name, lecturer.surname,
+           lecturer.age, lecturer.gender);
     }
 }
