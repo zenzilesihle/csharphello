@@ -4,18 +4,31 @@ class HelloWorld {
     static void Main(String[] args) {
         Console.WriteLine("Hello World");
 
-        /***TYPE CASTING***/
+        /***type casting***/
+        typeCasting();
+
+        /***switch statement***/
+        condition();
+
+        /***array manipulation***/
+        arrayClass();
+
+        /***value swapping***/
+        swap();
+
+        Console.ReadKey();
+    }
+
+    static void typeCasting() {
         double rand = 11.68;
         int rounded = (int)rand;
 
-        Console.WriteLine("TYPE CASTING DOUBLE TO INT");
         Console.WriteLine("11.68 to int value: {0}", rounded);
+    }
 
-        /***USER INPUT***/
-        // int num;
-        // num = Convert.ToInt32(Console.ReadLine());
-        
-        /***SWITCH STATEMENT***/
+    static void condition() {
+         /***SWITCH STATEMENT***/
+         Console.WriteLine("SWITCH STATEMENT");
         char letter = 'M';
 
         switch (letter) {
@@ -26,19 +39,21 @@ class HelloWorld {
                 Console.WriteLine("Unknown character: ");
                 break;
         }
+    }
 
-
-
+    static void swap(){
         int x = 9, y = 6, temp = 0;
         Console.WriteLine("Before SWAP: x = 9, y = 6, temp = 0");
         temp = x;
         x = y;
         y = temp;
 
-        // Console.WriteLine("After SWAP: x = {0}", temp);
         Console.WriteLine("After SWAP: x = {0}, y = {1}, temp = {2}",x, y, temp);
+    }
 
-        int [,] intArray = new int[4,5] 
+    static void arrayClass() {
+        Console.WriteLine("ARRAY ARRAYS");
+                int [,] intArray = new int[4,5] 
             {{27, 25, 24, 21, 28},
             {33, 36, 35, 31, 38},
             {44, 45, 41, 42, 47},
@@ -47,13 +62,15 @@ class HelloWorld {
 
         int inner, outer;
 
+        Console.WriteLine("number of elements: Array.LongLength = {0}", intArray.LongLength);
+        Console.WriteLine("number of dimensions: Array.Rank = {0}", intArray.Rank);
+        
         for (outer = 0; outer < 4; outer++) {
 
             for (inner = 0; inner < 5; inner++) {
                 Console.Write("{0} ", intArray[outer, inner]);
             }
-            Console.WriteLine("\n");
+            Console.WriteLine("");
         }
-        Console.ReadKey();
     }
 }
