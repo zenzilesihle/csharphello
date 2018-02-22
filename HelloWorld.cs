@@ -136,3 +136,7 @@ class HelloWorld {
         Console.WriteLine("Months.JANUARY: {0}", Months.JANUARY);
     }
 }
+
+public class student {
+    
+}
