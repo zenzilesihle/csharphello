@@ -1,4 +1,5 @@
 using System;
+using static User;
 
 struct Person {
     public string name;
@@ -31,6 +32,22 @@ class HelloWorld {
 
         /***enumaration ***/
         enumaration();
+
+        /***classes ***/
+        User user = new User();
+        user.setName("Neliswa");
+        user.setSurname("Zozo");
+        Console.WriteLine("User Name: {0}", user.getName());
+        Console.WriteLine("User Surname: {0}", user.getSurname());
+
+        /**inheritance**/
+        Student student = new Student();
+        student.setStudentNumber("201056478");
+        student.setName("Sisanda");
+        student.setSurname("Khumalo");
+        Console.WriteLine("Student Number: {0}", student.getStudentNumber());
+        Console.WriteLine("Student Name: {0}", student.getName());
+        Console.WriteLine("Student Surname: {0}", student.getSurname());
 
         Console.ReadKey();
     }
@@ -135,8 +152,4 @@ class HelloWorld {
         Console.WriteLine("(int)Months.DECEMBER: {0}", (int)Months.DECEMBER);
         Console.WriteLine("Months.JANUARY: {0}", Months.JANUARY);
     }
-}
-
-public class student {
-    
 }
